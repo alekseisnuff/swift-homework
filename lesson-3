@@ -1,4 +1,4 @@
-// lesson 3
+// lesson 3 homework
 
 var myStats = (ups:20, bike:100, floor:60, sets:63)
 print(myStats)
