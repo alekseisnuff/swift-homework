@@ -1,0 +1,50 @@
+// lesson 5 homework
+
+var first = 3
+var second = 6
+var third = 9
+var fourth = 12
+let brd : Double = 12
+
+if brd <= Double(first) {
+    print ("1st quartal")
+} else if brd <= Double(second) {
+    print ("2nd quartal")
+} else if brd <= Double(third) {
+    print ("3rd quartal")
+} else {
+    print ("4th quartal")
+}
+
+//test calculations
+// x - col, y - row transform abcdefgh for 12345678 (need to write func for this)
+
+let x = 2
+let y = 8
+let z = (x + y) % 2
+
+// cheese field: sum devide by 2 give 1 or 0
+
+// hard function for brut-force 
+//if (x == y) || (x + 2 == y) || (x + 4 == y) || (x + 6 == y) || (x == y + 2) || (x == y + 4) || (x == y + 6) 
+
+if ((x + y) % 2) == 1 {
+    print("This field are white")
+} else  {
+    print("This field are black")
+}
+
+// cheese matrix exmpl for me 
+/* 
+
+0 1 0 1 0 1 0 1
+1 0 1 0 1 0 1 0
+0 1 0 1 0 1 0 1
+1 0 1 0 1 0 1 0
+0 1 0 1 0 1 0 1
+1 0 1 0 1 0 1 0
+0 1 0 1 0 1 0 1
+1 0 1 0 1 0 1 0
+ 
+ 
+ */
