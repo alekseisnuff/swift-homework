@@ -1,0 +1,26 @@
+// lesson 6 homework
+
+//arrey operations 
+var mounthArrDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+var mounthArrName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+print(mounthArrDays)
+print("Time table for mounth: how many days in each mounth")
+
+for i in 0..<mounthArrDays.count {
+
+    print("In \(mounthArrName[i]) we have \(mounthArrDays[i]) days")
+    
+}
+
+// make the same operations with tuples
+
+var mounthTuple = (Name: mounthArrName, Days: mounthArrDays)
+
+for i in 0..<mounthArrDays.count {
+    print("In \(mounthTuple.Name[i]) are \(mounthTuple.Days[i]) days")
+}
+
+for var j = mounthArrDays.count; j < 0; j -= 1 { //need to swap
+   print("In \(mounthTuple.Name[j]) are \(mounthTuple.Days[j]) days")
+}
