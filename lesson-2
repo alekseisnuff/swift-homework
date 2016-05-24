@@ -1,0 +1,19 @@
+//lesson 2 homework
+
+let a = 10
+let b : Float = 5.02
+let c = 54.21
+
+let resA : Int = Int(Double(a) + Double(b) + c)
+let resB : Double = Double(a) + Double(b) + c
+let resC : Float = Float(a) + Float(c) + b
+
+print(Double(resC))
+print(Double(resB))
+
+if Double(resC) > resB {
+    print("Hello")
+}
+else{
+    print("Bye")
+}
