@@ -1,0 +1,47 @@
+// lesson 3
+
+var myStats = (ups:20, bike:100, floor:60, sets:63)
+print(myStats)
+print("My sports result: i can ride \(myStats.bike) km, make \(myStats.floor) up-floors and \(myStats.3) deep sets in the morning. Plus \(myStats.0) weidth myself up \n")
+print("ups \(myStats.0) bike:\(myStats.1) floor:\(myStats.2) sets:\(myStats.3) \n")
+
+var otherStats = (ups:25, bike:80, floor:61, sets:59)
+var swap = (ups:0, bike:0, floor:0, sets:0)
+
+
+swap.0 = otherStats.ups
+swap.1 = otherStats.bike
+swap.2 = otherStats.floor
+swap.3 = otherStats.sets
+
+otherStats.0=myStats.0
+myStats.0=swap.0
+otherStats.1=myStats.1
+myStats.1=swap.1
+otherStats.2=myStats.2
+myStats.2=swap.2
+otherStats.3=myStats.3
+myStats.3=swap.3
+
+print(myStats)
+print(otherStats)
+
+if myStats.0 > otherStats.0 {
+    print(myStats.0 - otherStats.0)
+} else {
+    print("Looser")
+}
+
+if (myStats.1 - otherStats.1) < 0 {
+    print("More")
+} else {
+    print("Looser")
+}
+
+if myStats.2 > otherStats.2{
+    print(myStats.2 - otherStats.2)
+} else {
+    print("Looser")
+}
+
+print("Result \(myStats.0 - otherStats.0) \(myStats.1 - otherStats.1) \(myStats.2 - otherStats.2) \(myStats.3 - otherStats.3)")
