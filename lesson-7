@@ -1,0 +1,83 @@
+// lesson 7 homework array
+
+var mounthArrDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+var mounthArrName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+print(mounthArrDays)
+print("Time table for mounth: how many days in each mounth")
+
+for i in 0..<mounthArrDays.count {
+    print("In \(mounthArrName[i]) we have \(mounthArrDays[i]) days")
+}
+
+var mounthTuple = (Name: mounthArrName, Days: mounthArrDays)
+
+for i in 0..<mounthArrDays.count {
+    print("In \(mounthTuple.Name[i]) are \(mounthTuple.Days[i]) days")
+}
+
+/*
+for var j = mounthArrDays.count; j < 0; j -= 1 { //need to swap
+   print("On \(mounthTuple.Name[j]) are \(mounthTuple.Days[j]) days")
+}
+*/
+
+let dayBrth = (month: 9, day: 12)
+
+var days = 0
+for i in 0..<(dayBrth.month - 1) {
+    days += mounthArrDays[i]
+}
+days += dayBrth.day
+
+// array of optionals
+
+let optsArr : [Int?] = [1, nil, 10, nil, 3, 4, nil] //add type annotation
+
+var sum = 0
+for value in optsArr {
+    if let value = value {
+        sum += value
+    }
+}
+
+// focus
+
+let aaa = 5
+if aaa < 10 {
+    let aaa = 10
+    print(aaa)
+}
+print(aaa)
+
+var i = mounthArrDays.count
+
+while i >= 1 {
+    // test i param
+    //print(i)
+    i -= 1
+    print("On \(mounthTuple.Name[i]) are \(mounthTuple.Days[i]) days")
+}
+
+let alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+// best case
+
+let characters = Array(alphabet.characters)
+var reversedAZ = [Character]()
+
+// function from github
+
+for arrayIndex in (characters.count - 1).stride(through: 0, by: -1) {
+    reversedAZ.append(characters[arrayIndex])
+}
+print(reversedAZ)
+
+// second edition
+
+var arrey = [String]()
+
+for char in alphabet.characters {
+    arrey.insert(String(char), atIndex: 0)
+}
+print(arrey)
