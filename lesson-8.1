@@ -1,0 +1,62 @@
+// HOMEWORK for lesson 8 
+
+var studMagazine : [String:Int!] = ["Alex Bleck" : 5, "Andtey White" : 4, "Mister Green" : 5, "Miss July" : 3, "Nekit Warior" : 2, "John Bell" : 5, "Ann White" : nil]
+
+studMagazine.updateValue(5, forKey: "Miss July")
+studMagazine.updateValue(3, forKey: "Ann White")
+studMagazine["John Golt"] = 6
+studMagazine["Inga Shark"] = 3
+studMagazine.removeValueForKey("Miss July")
+
+//var tuple = (name: studMagazine.keys, mark: studMagazine.values)
+var sum = 0
+var medSum = 0.0
+
+for (_, values) in studMagazine { //sum of marks
+    sum += values
+}
+
+let number = studMagazine.count
+medSum = Double(sum) / Double(number)
+
+print(sum)
+print(medSum)
+
+var monthDict = ["Jan" : 31, "Feb" : 28, "Mar" : 31, "Apr" : 30, "May" : 31, "Jun" : 30, "Jul" : 31, "Aug" : 31, "Sep" : 30, "Oct" : 31, "Nov" : 30, "Dec" : 31]
+
+// tuples
+
+for (key, value) in monthDict {
+    print("In \(key) month, are \(value) days")
+}
+
+for key in monthDict.keys {
+    print("In \(key) month, are \(monthDict[key]!) days")
+}
+
+//cheese
+
+var cheeseDict = [String:String]()
+
+var charArr = ["A", "B", "C", "D", "E", "F", "G", "H"] //name of cols
+let n = 8 //number of rows
+
+for i in 0..<charArr.count {
+    for j in 1...n {
+        if i%2 == j%2 {
+            cheeseDict["\(charArr[i])\(j)"] = "white"
+        } else {
+            cheeseDict["\(charArr[i])\(j)"] = "black"
+        }
+    }
+}
+
+for (key, value) in cheeseDict {
+    print("Cell \(key) is \(value)")
+}
+
+var cells = [Bool](count:64, repeatedValue: false) // arrey of false
+
+let i = 5, j = 6 //cells
+
+cells[0] = (i % 2 != j % 2) // add element to 0 position, true or false
